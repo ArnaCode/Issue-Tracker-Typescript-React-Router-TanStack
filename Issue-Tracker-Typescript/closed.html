@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="dark:bg-gray-900 dark:text-white transition-colors duration-300"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="data:," />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+
+    <link href="./src/index.css" rel="stylesheet" />
+    <title>Closed Issues - Typescript</title>
+  </head>
+  <body
+    class="dark:bg-gray-900 bg-slate-50 dark:text-white max-w-screen-2xl mx-auto"
+  >
+    <header class="p-6 sm:p-10 border-b border-gray-300 dark:border-gray-700">
+      <nav class="flex justify-between items-center">
+        <ul class="flex flex-col sm:items-center gap-6 sm:flex-row">
+          <li>
+            <a
+              href="./index.html"
+              class="text-gray-600 dark:text-gray-300 px-4 py-2 border border-slate-400 rounded"
+              >All Issues</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="./open.html"
+              class="text-gray-600 dark:text-gray-300 px-4 py-2 border border-slate-400 rounded"
+              >Open Issues</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="./closed.html"
+              class="bg-green-200 text-green-800 dark:bg-green-800 dark:text-green-200 font-bold text-xl px-4 py-2 rounded"
+              >Closed Issues</a
+            >
+          </li>
+        </ul>
+
+        <div id="dark-mode-toggle" class="cursor-pointer">
+          <i class="fa-solid fa-sun text-2xl text-orange-300"></i>
+          <i class="fa-solid fa-moon text-2xl text-gray-500"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex flex-col gap-4 p-8 sm:p-12">
+      <h1 class="text-4xl font-bold mb-4">Closed Issues</h1>
+      <section
+        id="issues-list"
+        class="grid gap-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
+      >
+        <!-- Dynamically populated issues go here -->
+      </section>
+    </main>
+
+    <script type="module" src="./src/closed.ts"></script>
+  </body>
+</html>
