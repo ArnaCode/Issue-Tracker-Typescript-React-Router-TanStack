@@ -1,4 +1,4 @@
-# Conditional Rendering in React
+# Issue Tracker App
 
 Welcome to the 3rd app of this tutorial series. In this video, we will create an Issue Tracker. The app has 3 pages, an all issues page, an open issues page and a closed issues page. We will start coding the app using Vanilla Typescript and style it with Tailwind CSS. Then we will code the app with React and implement the app routing with React Router. In the third and final iteration of the app, we will implement routing with TanStack.
 
